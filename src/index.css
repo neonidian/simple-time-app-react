@@ -7,3 +7,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: #d2d6e0;
 }
+
+main {
+    padding-left: 2vmax;
+}
