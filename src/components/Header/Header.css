@@ -1,0 +1,12 @@
+#header {
+    border-bottom: black solid thick;
+    text-align: center;
+}
+
+blockquote::before {
+    content: '\201C';
+}
+
+blockquote::after {
+    content: '\201D';
+}
