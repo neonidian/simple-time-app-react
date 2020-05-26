@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 
 const HomePage = () => {
-    let [time, setTime] = useState({datetime: 'Loading'});
+    const initialDisplayText = 'Loading';
+    let [time, setTime] = useState({datetime: initialDisplayText});
 
     useEffect(() => {
             const fetchTime = fetch('http://worldtimeapi.org/api/ip')
@@ -10,8 +11,14 @@ const HomePage = () => {
         }, []
     );
 
-    let toDisplay = time.datetime === 'Loading' ? 'Loading...' :
-        <p>Time based on IP address: <strong>{new Date(time.datetime).toTimeString()}</strong></p>;
+    let toDisplay = time.datetime === initialDisplayText ?
+        <p id={'time-ip-address'}>
+            Loading...
+        </p>
+        :
+        <p id={'time-ip-address'}>Time based on your public IP address ({time.client_ip}):
+            <strong>{new Date(time.datetime).toTimeString()}</strong>
+        </p>;
 
     return (
         <main>
