@@ -12,8 +12,9 @@ const HomePage = () => {
 
     let populateDataFromApi = data => setTimeInformation(data);
 
+    const dataTestid = 'time-ip-address';
     let toDisplay =
-        <p id={'time-ip-address'}>
+        <p id={dataTestid} data-testid={dataTestid}>
             {Object.keys(timeInformation).length === 0 ?
                 "Loading..."
                 :
