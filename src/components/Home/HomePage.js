@@ -1,24 +1,26 @@
 import React, {useState, useEffect} from 'react';
 
 const HomePage = () => {
-    const initialDisplayText = 'Loading';
-    let [time, setTime] = useState({datetime: initialDisplayText});
+    let [timeInformation, setTimeInformation] = useState({});
 
     useEffect(() => {
-            const fetchTime = fetch('http://worldtimeapi.org/api/ip')
-                .then(response => response.json());
-            fetchTime.then(data => setTime(time = data));
+            fetch('http://worldtimeapi.org/api/ip')
+                .then(response => response.json())
+                .then(data => populateDataFromApi(data));
         }, []
     );
 
-    let toDisplay = time.datetime === initialDisplayText ?
+    let populateDataFromApi = data => setTimeInformation(data)
+
+    let toDisplay =
         <p id={'time-ip-address'}>
-            Loading...
+            {Object.keys(timeInformation).length === 0 ?
+                "Loading..."
+                :
+                `Time based on your public IP address (${timeInformation.client_ip}) : 
+                ${new Date(timeInformation.datetime).toTimeString()}`
+            }
         </p>
-        :
-        <p id={'time-ip-address'}>Time based on your public IP address ({time.client_ip}):
-            <strong>{new Date(time.datetime).toTimeString()}</strong>
-        </p>;
 
     return (
         <main>
