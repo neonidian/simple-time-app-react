@@ -10,7 +10,7 @@ const HomePage = () => {
         }, []
     );
 
-    let populateDataFromApi = data => setTimeInformation(data)
+    let populateDataFromApi = data => setTimeInformation(data);
 
     let toDisplay =
         <p id={'time-ip-address'}>
@@ -20,7 +20,7 @@ const HomePage = () => {
                 `Time based on your public IP address (${timeInformation.client_ip}) : 
                 ${new Date(timeInformation.datetime).toTimeString()}`
             }
-        </p>
+        </p>;
 
     return (
         <main>
