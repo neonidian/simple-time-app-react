@@ -19,7 +19,7 @@ const HomePage = () => {
     const dataTestId = 'time-ip-address';
     let toDisplay =
         <p id={dataTestId} data-testid={dataTestId}>
-            {timeInformation.datetime == undefined ?
+            {timeInformation.datetime === undefined ?
                 "Loading..."
                 :
                 `Time based on your public IP address (${timeInformation.client_ip}) : ${new Date(timeInformation.datetime).toTimeString()}`
