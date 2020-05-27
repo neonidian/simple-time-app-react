@@ -4,3 +4,7 @@ main {
     border: snow dashed thick;
     margin-top: 1vmax;
 }
+
+#time-ip-address {
+    font-size: larger;
+}
