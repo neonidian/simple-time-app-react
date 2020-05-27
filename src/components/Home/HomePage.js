@@ -18,8 +18,7 @@ const HomePage = () => {
             {Object.keys(timeInformation).length === 0 ?
                 "Loading..."
                 :
-                `Time based on your public IP address (${timeInformation.client_ip}) : 
-                ${new Date(timeInformation.datetime).toTimeString()}`
+                `Time based on your public IP address (${timeInformation.client_ip}) : ${new Date(timeInformation.datetime).toTimeString()}`
             }
         </p>;
 
