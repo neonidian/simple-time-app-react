@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './HomePage.css'
 
 const HomePage = () => {
     let [timeInformation, setTimeInformation] =
