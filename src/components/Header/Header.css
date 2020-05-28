@@ -2,6 +2,7 @@ header {
     border: snow dashed thick;
     text-align: center;
     background-color: rgba(236, 212, 180, 0.51);
+    margin-top: 1vh;
 }
 
 blockquote::before {

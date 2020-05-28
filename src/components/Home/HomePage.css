@@ -1,8 +1,8 @@
 main {
     background-color: #f5e9ee;
     padding: 3vmax;
-    border: snow dashed thick;
-    margin-top: 1vmax;
+    border: #577670 dashed thick;
+    margin-top: 1vh;
 }
 
 #time-ip-address {
