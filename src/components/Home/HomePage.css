@@ -5,6 +5,24 @@ main {
     margin-top: 1vmax;
 }
 
-#time-ip-address {
+p#time-ip-address {
     font-size: larger;
+    display: inline-block;
+    margin: 0;
+}
+
+time {
+    font-weight: bolder;
+    font-size: larger;
+    margin-right: 2vmin;
+}
+
+button {
+    background-color: #4CAF50;
+    border-color: #1aa31a;
+    border-radius: 2vmin;
+    color: snow;
+    padding: 2vmin 4vmin;
+    font-size: x-large;
+    float: end;
 }

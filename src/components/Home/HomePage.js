@@ -9,13 +9,22 @@ const HomePage = () => {
         });
 
     useEffect(() => {
-            fetch('http://worldtimeapi.org/api/ip')
-                .then(response => response.json())
-                .then(data => populateDataFromApi(data));
+            fetchTimeInformationFromApi();
         }, []
     );
 
+    const fetchTimeInformationFromApi = () => {
+        fetch('http://worldtimeapi.org/api/ip')
+            .then(response => response.json())
+            .then(data => populateDataFromApi(data));
+    }
+
     let populateDataFromApi = data => setTimeInformation(data);
+    let displayTimeInformation = (timeInfo) =>
+        <p>
+            Time based on your public IP address ({timeInfo.client_ip})
+            is <time>{new Date(timeInfo.datetime).toTimeString()}</time>
+        </p>
 
     const dataTestId = 'time-ip-address';
     let toDisplay =
@@ -24,13 +33,18 @@ const HomePage = () => {
                 timeInformation.datetime === undefined ?
                     "Loading..."
                     :
-                    `Time based on your public IP address (${timeInformation.client_ip}) : ${new Date(timeInformation.datetime).toTimeString()}`
+                    displayTimeInformation(timeInformation)
             }
         </p>;
 
+    const RefreshButton = () =>
+        <button id={'refresh-time'} onClick={fetchTimeInformationFromApi}>
+            Get Current Time
+        </button>
+
     return (
         <main>
-            {toDisplay}
+            {toDisplay} <RefreshButton />
         </main>);
 };
 
