@@ -37,5 +37,6 @@ button:active {
 
 button:disabled {
     background: #ccc;
+    border-color: #808280;
     cursor: wait;
 }

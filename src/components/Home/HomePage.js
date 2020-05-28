@@ -1,14 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import './HomePage.css'
 
+// TODO:
+//  1. Split render and logic into separate components. Use Render props ?
+//  2. Minimize number of times the page is rendered. Current. On page load: 10, on clicking 'Get current time' button: 8
+
 const HomePage = () => {
     let [timeInformation, setTimeInformation] =
         useState({
             datetime: undefined,
             client_ip: undefined
         });
-    let [isRefreshButtonDisplayed, toggleRefreshButtonDisplayed] = useState(false)
-    let [isRefreshButtonDisabled, toggleRefreshButtonDisabled] = useState(false)
+    let [isRefreshButtonDisplayed, makeRefreshButtonDisplayed] = useState(false)
+    let [isRefreshButtonDisabled, makeRefreshButtonDisabled] = useState(false)
 
     useEffect(() => {
             fetchTimeInformationFromApi();
@@ -16,13 +20,13 @@ const HomePage = () => {
     );
 
     const fetchTimeInformationFromApi = () => {
-        toggleRefreshButtonDisabled(true);
+        makeRefreshButtonDisabled(true);
         fetch('http://worldtimeapi.org/api/ip')
             .then(response => response.json())
             .then(data => {
                 setTimeInformation(data);
-                toggleRefreshButtonDisplayed(true);
-                toggleRefreshButtonDisabled(false);
+                makeRefreshButtonDisplayed(true);
+                makeRefreshButtonDisabled(false);
             });
     }
 
@@ -56,7 +60,8 @@ const HomePage = () => {
         <main>
             {toDisplay}
             <RefreshButton />
+            {console.log("Rendered !!?")}
         </main>);
 };
 
-export default HomePage;
+export default React.memo(HomePage);
