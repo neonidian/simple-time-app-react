@@ -5,7 +5,7 @@ main {
     margin-top: 1vmax;
 }
 
-p#time-ip-address {
+#time-ip-address {
     font-size: larger;
     display: inline-block;
     margin: 0;
@@ -25,4 +25,12 @@ button {
     padding: 2vmin 4vmin;
     font-size: x-large;
     float: end;
+    cursor: pointer;
+    outline: none;
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }

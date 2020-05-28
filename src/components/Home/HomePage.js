@@ -28,14 +28,14 @@ const HomePage = () => {
 
     const dataTestId = 'time-ip-address';
     let toDisplay =
-        <p id={dataTestId} data-testid={dataTestId}>
+        <div id={dataTestId} data-testid={dataTestId}>
             {
                 timeInformation.datetime === undefined ?
                     "Loading..."
                     :
                     displayTimeInformation(timeInformation)
             }
-        </p>;
+        </div>;
 
     const RefreshButton = () =>
         <button id={'refresh-time'} onClick={fetchTimeInformationFromApi}>
