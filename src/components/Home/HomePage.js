@@ -60,7 +60,6 @@ const HomePage = () => {
         <main>
             {toDisplay}
             <RefreshButton />
-            {console.log("Rendered !!?")}
         </main>);
 };
 
