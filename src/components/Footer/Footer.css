@@ -7,7 +7,7 @@ footer {
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
-    border: black dashed thick;
+    border-top: black dashed thick;
 }
 
 a {
