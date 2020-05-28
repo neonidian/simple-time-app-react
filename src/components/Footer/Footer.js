@@ -4,7 +4,13 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer>
-            API used from <em>worldtimeapi.org</em>
+            API used from <em>
+            <a
+                href={'http://worldtimeapi.org/'}
+                rel={"noopener noreferrer"}
+                target={"_blank"}>
+                worldtimeapi.org
+            </a></em>
         </footer>
     );
 };

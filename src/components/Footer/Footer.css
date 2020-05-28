@@ -9,3 +9,7 @@ footer {
     padding-bottom: 2%;
     border-top: black dashed thick;
 }
+
+a {
+    color: #cccccc;
+}
