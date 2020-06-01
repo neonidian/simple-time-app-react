@@ -4,3 +4,27 @@ div.time-by-location {
     border: #1b7608 dashed thick;
     margin-top: 1vh;
 }
+
+h2 {
+    display: inline;
+}
+
+select {
+    font-size: larger;
+    background-color: #f9f9f9;
+    width: 20%;
+    border: dashed;
+}
+
+select:focus {outline: 0;}
+
+#drop-down-time-by-location {
+    display: inline;
+    margin-left: 2vh;
+}
+
+#display-time-by-location {
+    font-size: larger;
+    display: inline;
+    margin-left: 2vh;
+}

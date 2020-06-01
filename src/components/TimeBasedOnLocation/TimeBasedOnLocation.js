@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import './TimeBasedOnLocation.css'
 
+// TODO:
+//  1. Split render and logic into separate components. Use Render props ?
+//  2. Minimize number of times the page is rendered.
+
 const TimeBasedOnLocation = () => {
 
     const [timeZoneInformation, setTimeZoneInformation] = useState("");
@@ -61,10 +65,10 @@ const TimeBasedOnLocation = () => {
     return (
         <div className={"time-by-location"}>
             <h2>Time based on location</h2>
-            <div>
+            <div id={"drop-down-time-by-location"}>
                 {dropDownPopulatedWithTimeZone}
             </div>
-            <div>
+            <div id={"display-time-by-location"}>
                 {displayTimeBasedOnLocation}
             </div>
         </div>
