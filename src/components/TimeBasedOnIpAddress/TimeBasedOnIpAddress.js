@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import './HomePage.css'
+import './TimeBasedOnIpAddress.css'
 
 // TODO:
 //  1. Split render and logic into separate components. Use Render props ?
 //  2. Minimize number of times the page is rendered. Current. On page load: 10, on clicking 'Get current time' button: 8
 
-const HomePage = () => {
+const TimeBasedOnIpAddress = () => {
     let [timeInformation, setTimeInformation] =
         useState({
             datetime: undefined,
@@ -57,10 +57,10 @@ const HomePage = () => {
         </button>
 
     return (
-        <main>
+        <div className={"main"}>
             {toDisplay}
             <RefreshButton />
-        </main>);
+        </div>);
 };
 
-export default React.memo(HomePage);
+export default React.memo(TimeBasedOnIpAddress);
