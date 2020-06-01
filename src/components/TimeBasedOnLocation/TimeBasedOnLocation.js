@@ -68,6 +68,7 @@ const TimeBasedOnLocation = () => {
             <div id={"drop-down-time-by-location"}>
                 {dropDownPopulatedWithTimeZone}
             </div>
+            <br /><br />
             <div id={"display-time-by-location"}>
                 {displayTimeBasedOnLocation}
             </div>

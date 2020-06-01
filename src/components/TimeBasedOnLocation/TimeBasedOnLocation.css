@@ -12,7 +12,7 @@ h2 {
 select {
     font-size: larger;
     background-color: #f9f9f9;
-    width: 20%;
+    width: 14vw;
     border: dashed;
 }
 
@@ -26,5 +26,5 @@ select:focus {outline: 0;}
 #display-time-by-location {
     font-size: larger;
     display: inline;
-    margin-left: 2vh;
+    margin-left: 1vh;
 }
