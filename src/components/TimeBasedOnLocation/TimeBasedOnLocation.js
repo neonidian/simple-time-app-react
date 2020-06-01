@@ -10,11 +10,13 @@ const TimeBasedOnLocation = () => {
     useEffect(() => fetchTimeZonesFromApi(), []);
 
     useEffect(() => {
+        if(selectedTimeZone !== ""){
             fetch(`http://worldtimeapi.org/api/${selectedTimeZone}`)
                 .then(response => response.json())
                 .then(data => {
                     setCurrentTimeByLocation(data.datetime.toString());
                 })
+        }
         }, [selectedTimeZone]
     )
 
@@ -32,8 +34,12 @@ const TimeBasedOnLocation = () => {
         setSelectedTimeZone(value);
     };
 
-    let getAllTimeZones = () => timeZoneInformation.map(aTimeZone => <option key={aTimeZone}
-                                                                             value={aTimeZone}>{aTimeZone}</option>);
+    const getAllTimeZones = () => timeZoneInformation.map(aTimeZone =>
+        <option key={aTimeZone}
+                value={aTimeZone}
+        >
+            {aTimeZone}
+        </option>);
 
     const dropDownPopulatedWithTimeZone =
         timeZoneInformation === "" ?
@@ -44,11 +50,12 @@ const TimeBasedOnLocation = () => {
                 onChange={handleChange}
                 name="selectedTimeZone"
             >
+                <option value={""}>** Select a time zone **</option>
                 {getAllTimeZones()}
             </select>
     ;
 
-    const displayTimeBasedOnLocation = selectedTimeZone === "" ? "Select a time zone from drop-down"
+    const displayTimeBasedOnLocation = selectedTimeZone === "" ? null
         :
         `Selected location is ${selectedTimeZone} and time now is ${currentTimeByLocation}`
 
