@@ -30,7 +30,7 @@ const TimeBasedOnLocation = () => {
     };
 
     const handleChange = (event) => {
-        let {name, value} = event.target;
+        let {value} = event.target;
         setSelectedTimeZone(value);
     };
 
@@ -48,7 +48,6 @@ const TimeBasedOnLocation = () => {
             <select
                 value={selectedTimeZone}
                 onChange={handleChange}
-                name="selectedTimeZone"
             >
                 <option value={""}>** Select a time zone **</option>
                 {getAllTimeZones()}
