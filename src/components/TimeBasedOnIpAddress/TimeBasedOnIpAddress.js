@@ -33,7 +33,7 @@ const TimeBasedOnIpAddress = () => {
     let displayTimeInformation = (timeInfo) =>
         <p>
             Time based on your public IP address ({timeInfo.client_ip})
-            is <time>{new Date(timeInfo.datetime).toTimeString()}</time>
+            is <time>{(timeInfo.datetime).toString()}</time>
         </p>
 
     const dataTestId = 'time-ip-address';
