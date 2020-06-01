@@ -1,5 +1,5 @@
 # simple-time-app-react
-A simple React.js application that uses REST API from [worldtimeapi.org](http://worldtimeapi.org/api/) to display time
+A simple React.js application that uses API from [worldtimeapi.org](http://worldtimeapi.org/api/) to display time
 
 ## Install and Start
 
