@@ -5,6 +5,10 @@ header {
     margin-top: 1vh;
 }
 
+h1 {
+    display: inline-block;
+}
+
 blockquote::before {
     content: '\201C';
 }
