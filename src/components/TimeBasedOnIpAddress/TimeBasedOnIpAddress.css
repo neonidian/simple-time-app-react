@@ -27,6 +27,11 @@ button {
     float: end;
     cursor: pointer;
     outline: none;
+    transition: all 0.5s;
+}
+
+button:hover {
+    color: #e8e5e5;
 }
 
 button:active {
