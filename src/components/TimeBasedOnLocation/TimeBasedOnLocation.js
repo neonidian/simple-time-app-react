@@ -4,8 +4,8 @@ import './TimeBasedOnLocation.css'
 const TimeBasedOnLocation = () => {
 
     const [timeZoneInformation, setTimeZoneInformation] = useState("");
-    let [selectedTimeZone, setSelectedTimeZone] = useState("");
-    let [currentTimeByLocation, setCurrentTimeByLocation] = useState("");
+    const [selectedTimeZone, setSelectedTimeZone] = useState("");
+    const [currentTimeByLocation, setCurrentTimeByLocation] = useState("");
 
     useEffect(() => fetchTimeZonesFromApi(), []);
 
@@ -31,7 +31,7 @@ const TimeBasedOnLocation = () => {
     };
 
     const handleChange = (event) => {
-        let {value} = event.target;
+        const {value} = event.target;
         setSelectedTimeZone(value);
     };
 

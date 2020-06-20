@@ -2,13 +2,13 @@ import React, {useState, useEffect} from 'react';
 import './TimeBasedOnIpAddress.css'
 
 const TimeBasedOnIpAddress = () => {
-    let [timeInformation, setTimeInformation] =
+    const [timeInformation, setTimeInformation] =
         useState({
             datetime: undefined,
             client_ip: undefined
         });
-    let [isRefreshButtonDisplayed, makeRefreshButtonDisplayed] = useState(false)
-    let [isRefreshButtonDisabled, makeRefreshButtonDisabled] = useState(false)
+    const [isRefreshButtonDisplayed, makeRefreshButtonDisplayed] = useState(false)
+    const [isRefreshButtonDisabled, makeRefreshButtonDisabled] = useState(false)
 
     useEffect(() => {
             fetchTimeInformationFromApi();
@@ -26,14 +26,14 @@ const TimeBasedOnIpAddress = () => {
             });
     }
 
-    let displayTimeInformation = (timeInfo) =>
+    const displayTimeInformation = (timeInfo) =>
         <p>
             Time based on your public IP address ({timeInfo.client_ip})
             is <time>{(timeInfo.datetime).toString()}</time>
         </p>
 
     const dataTestId = 'time-ip-address';
-    let toDisplay =
+    const toDisplay =
         <div id={dataTestId} data-testid={dataTestId}>
             {
                 timeInformation.datetime === undefined ?
