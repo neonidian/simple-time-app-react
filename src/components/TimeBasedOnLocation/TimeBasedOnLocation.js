@@ -2,13 +2,15 @@ import React, {useState, useEffect} from 'react';
 import './TimeBasedOnLocation.css'
 
 const TimeBasedOnLocation = () => {
-
+    // Declare React states
     const [timeZoneInformation, setTimeZoneInformation] = useState("");
     const [selectedTimeZone, setSelectedTimeZone] = useState("");
     const [currentTimeByLocation, setCurrentTimeByLocation] = useState("");
 
+    // React hook to perform operation when the page has mounted(or page loads)
     useEffect(() => fetchTimeZonesFromApi(), []);
 
+    // React hook to keep tract of the state - 'selectedTimeZone' and re-render this component when the state has changed
     useEffect(() => {
         if(selectedTimeZone !== ""){
             setCurrentTimeByLocation("Loading...")

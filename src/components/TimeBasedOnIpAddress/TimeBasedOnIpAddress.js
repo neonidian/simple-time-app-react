@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './TimeBasedOnIpAddress.css'
 
 const TimeBasedOnIpAddress = () => {
+    // Declare React states
     const [timeInformation, setTimeInformation] =
         useState({
             datetime: undefined,
@@ -10,6 +11,7 @@ const TimeBasedOnIpAddress = () => {
     const [isRefreshButtonDisplayed, makeRefreshButtonDisplayed] = useState(false)
     const [isRefreshButtonDisabled, makeRefreshButtonDisabled] = useState(false)
 
+    // React hook to perform operation when the page has mounted(or page loads)
     useEffect(() => {
             fetchTimeInformationFromApi();
         }, []
