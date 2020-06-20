@@ -15,6 +15,7 @@ const TimeBasedOnLocation = () => {
 
     useEffect(() => {
         if(selectedTimeZone !== ""){
+            setCurrentTimeByLocation("Loading...")
             fetch(`http://worldtimeapi.org/api/${selectedTimeZone}`)
                 .then(response => response.json())
                 .then(data => {
