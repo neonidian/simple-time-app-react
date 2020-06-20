@@ -2,6 +2,10 @@
 A simple React Javascript application that uses API from [worldtimeapi.org](http://worldtimeapi.org/api/) 
 to display time in date-time format
 
+## Pre-requisites
+1. Install [Node JS](https://nodejs.org/en/download/)
+2. An IDE like Atom or Webstorm
+
 ## Install and Start
 
 In the commandline,
