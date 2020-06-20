@@ -12,12 +12,10 @@ In the commandline,
 
 ## Structure
 1. React components are placed in [src/components](./src/components) directory
-2. [App.js](./src/App.js) file has all the components imported into it
-3. Each component is a section from top of the page and is imported in the order to display in App.js.
-4. React hooks have been used in place of class based components
+2. [App.js](./src/App.js) file has all the components imported into it. Each component is a section from top of the page and is imported in the order of display in the browser
+3. React hooks have been used in place of class based components
 
 ## Where to learn
 
 1. Interactive tutorial from scrimba.com - https://scrimba.com/course/glearnreact
 2. Read more about React framework at https://reactjs.org/ - Official website
-
