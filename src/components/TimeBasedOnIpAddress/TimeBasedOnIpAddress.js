@@ -1,10 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './TimeBasedOnIpAddress.css'
 
-// TODO:
-//  1. Split render and logic into separate components. Use Render props ?
-//  2. Minimize number of times the page is rendered. Current. On page load: 10, on clicking 'Get current time' button: 8
-
 const TimeBasedOnIpAddress = () => {
     let [timeInformation, setTimeInformation] =
         useState({

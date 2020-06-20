@@ -1,10 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './TimeBasedOnLocation.css'
 
-// TODO:
-//  1. Split render and logic into separate components. Use Render props ?
-//  2. Minimize number of times the page is rendered.
-
 const TimeBasedOnLocation = () => {
 
     const [timeZoneInformation, setTimeZoneInformation] = useState("");
