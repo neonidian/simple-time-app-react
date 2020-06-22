@@ -1,5 +1,5 @@
 # Simple Time App Using React
-A simple React Javascript application that uses API from [worldtimeapi.org](http://worldtimeapi.org/api/) 
+A simple web app using React Javascript library that uses API from [worldtimeapi.org](http://worldtimeapi.org/api/) 
 to display time in date-time format
 
 ## Pre-requisites
