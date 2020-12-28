@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import { memo, useState, useEffect } from 'react';
 import './TimeBasedOnIpAddress.css'
 
 const TimeBasedOnIpAddress = () => {
@@ -61,4 +61,4 @@ const TimeBasedOnIpAddress = () => {
         </div>);
 };
 
-export default React.memo(TimeBasedOnIpAddress);
+export default memo(TimeBasedOnIpAddress);

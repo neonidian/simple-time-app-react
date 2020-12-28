@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './components/Header/Header';
 import TimeBasedOnIpAddress from './components/TimeBasedOnIpAddress/TimeBasedOnIpAddress';
 import TimeBasedOnLocation from "./components/TimeBasedOnLocation/TimeBasedOnLocation";

@@ -1,4 +1,3 @@
-import React from 'react';
 import './Header.css';
 
 const clockSvg = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
