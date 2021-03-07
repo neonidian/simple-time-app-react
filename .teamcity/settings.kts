@@ -23,7 +23,7 @@ object BuildAndTest : BuildType({
 
         script {
             name = "Run tests"
-            scriptContent = """ npm test """
+            scriptContent = """ npm run verify """
         }
     }
 

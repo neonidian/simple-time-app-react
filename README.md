@@ -23,3 +23,7 @@ In the commandline,
 
 1. Interactive tutorial from scrimba.com - https://scrimba.com/course/glearnreact
 2. Read more about React framework at https://reactjs.org/ - Official website
+
+## TeamCity
+As an example for configuration as code using TeamCity as the build system, see settings.kts in [.teamcity](.teamcity) directory. The significance
+is that the configuration of a build system can be fully coded and version controlled.
