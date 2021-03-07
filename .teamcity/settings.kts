@@ -17,7 +17,13 @@ object BuildAndTest : BuildType({
 
     steps {
         script {
+            name = "Install npm packages"
             scriptContent = """ npm install """
+        }
+
+        script {
+            name = "Run tests"
+            scriptContent = """ npm test """
         }
     }
 
