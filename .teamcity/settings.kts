@@ -15,8 +15,8 @@ object BuildAndTest : BuildType({
     }
 
     steps {
-        ScriptBuildStep {
-            ScriptContent = "npm install"
+        script {
+            scriptContent = "npm install"
         }
     }
 
