@@ -25,6 +25,11 @@ object BuildAndTest : BuildType({
             name = "Run tests"
             scriptContent = """ npm run verify """
         }
+
+        script {
+            name = "Start React in development mode"
+            scriptContent = """ npm start """
+        }
     }
 
     triggers {
